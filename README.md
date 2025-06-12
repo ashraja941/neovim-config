@@ -6,7 +6,7 @@ based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 
 ## Minimal Stable build
 
-## Extra plugins used :
+Extra plugins used :
 - autopairs 
 - neo-tree
 - color
