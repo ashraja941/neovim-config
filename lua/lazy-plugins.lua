@@ -50,6 +50,8 @@ require('lazy').setup({
 
   require 'kickstart.plugins.undotree',
 
+  require 'kickstart.plugins.snacks',
+
   -- ColorScheme
   require 'kickstart/plugins/color',
   -- require 'kickstart/plugins/tokyonight',
