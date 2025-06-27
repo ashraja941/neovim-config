@@ -53,4 +53,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.keymap.set('n','<leader>lg',function () Snacks.lazygit() end, { desc = '[L]azy [G]it'})
+
 -- vim: ts=2 sts=2 sw=2 et

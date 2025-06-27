@@ -32,6 +32,7 @@ return {
                     { section = "startup" },
                 },
             },
+            lazygit = {enabled = true},
         },
     }
 }
