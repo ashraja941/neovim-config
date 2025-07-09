@@ -52,6 +52,8 @@ require('lazy').setup({
 
   require 'kickstart.plugins.snacks',
 
+  require 'kickstart.plugins.supermaven',
+
   -- ColorScheme
   require 'kickstart/plugins/color',
   -- require 'kickstart/plugins/tokyonight',
