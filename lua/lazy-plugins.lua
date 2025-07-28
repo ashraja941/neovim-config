@@ -35,7 +35,6 @@ require('lazy').setup({
 
   require 'kickstart/plugins/blink-cmp',
 
-
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
@@ -46,9 +45,13 @@ require('lazy').setup({
 
   require 'kickstart/plugins/harpoon',
 
-  require 'kickstart/plugins/treesitter-textobjects',
+  -- require 'kickstart/plugins/treesitter-textobjects',
 
   require 'kickstart.plugins.undotree',
+
+  require 'kickstart.plugins.snacks',
+
+  require 'kickstart.plugins.supermaven',
 
   -- ColorScheme
   require 'kickstart/plugins/color',

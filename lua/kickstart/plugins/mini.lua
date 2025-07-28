@@ -8,7 +8,12 @@ return {
       --  - va)  - [V]isually select [A]round [)]paren
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
-      require('mini.ai').setup { n_lines = 500 }
+      local gen_spec = require('mini.ai').gen_spec
+      require('mini.ai').setup( 
+        {
+          n_lines = 500,
+        }
+      )
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -16,6 +21,7 @@ return {
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+      require('mini.comment').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
