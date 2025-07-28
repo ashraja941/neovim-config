@@ -12,3 +12,6 @@ Extra plugins used :
 - color
 - harpoon
 - undotree
+- snacks.nvim
+- supermaven for AI autocomplete (disabled)
+- mini 
