@@ -96,7 +96,7 @@ return {
 
       local builtin = require('telescope.builtin')
       vim.keymap.set('n','<leader>pf',builtin.find_files,{desc = '[P]roject [F]iles'})
-      vim.keymap.set('n','<C-p>',builtin.git_files,{})
+      vim.keymap.set('n','<leader>gf',builtin.git_files,{})
       -- It's also possible to pass additional configuration options.
       --  See `:help telescope.builtin.live_grep()` for information about particular keys
       vim.keymap.set('n', '<leader>s/', function()
