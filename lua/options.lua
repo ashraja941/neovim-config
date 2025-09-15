@@ -3,7 +3,13 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
-vim.o.shell = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+-- vim.o.shell = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+
+vim.o.shell = [["C:/Program Files/PowerShell/7/pwsh.exe"]]
+vim.o.shellcmdflag = "-NoLogo -NoProfile -Command"
+vim.o.shellquote = ''
+vim.o.shellxquote = ''
+
 -- Make line numbers default
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
