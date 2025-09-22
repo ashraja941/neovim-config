@@ -75,7 +75,13 @@ return {
                     return {
                         NormalFloat = { bg = "none"},
                         FloatBorder = { bg = "none"},
-                        Pmenu = { bg = "none"}
+                        Pmenu = { bg = "none"},
+                        TelescopeTitle        = { bg = "none" },
+                        TelescopePromptTitle  = { bg = "none" },
+                        TelescopeResultsTitle = { bg = "none" },
+                        TelescopePreviewTitle = { bg = "none" },
+                        TelescopeNormal       = { bg = "none" },
+                        TelescopeBorder       = { bg = "none" },
                     }
                 end,
                 integrations = {
