@@ -43,6 +43,8 @@ require('lazy').setup({
 
   require 'kickstart/plugins/neo-tree',
 
+  require 'kickstart/plugins/oil',
+
   require 'kickstart/plugins/harpoon',
 
   -- require 'kickstart/plugins/treesitter-textobjects',

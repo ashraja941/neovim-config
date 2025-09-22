@@ -271,13 +271,13 @@ return {
         },
       }
       
-      require('lspconfig').zls.setup({
-        settings = {
-          zls = {
-            zig_exe_path = "D:/Program Files/zig-x86_64-windows-0.15.0-dev.1254+c9ce1debe/zig.exe",
-          }
-        }
-      })
+      -- require('lspconfig').zls.setup({
+      --   settings = {
+      --     zls = {
+      --       zig_exe_path = "D:/Program Files/zig-x86_64-windows-0.15.0-dev.1254+c9ce1debe/zig.exe",
+      --     }
+      --   }
+      -- })
     end,
   },
 }

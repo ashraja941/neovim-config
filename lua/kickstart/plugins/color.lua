@@ -1,9 +1,10 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
+	-- color = color or "rose-pine"
+	-- vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
 
 end
 
@@ -70,6 +71,13 @@ return {
                     operators = {},
                     -- miscs = {}, -- Uncomment to turn off hard-coded styles
                 },
+                custom_highlights = function (colors)
+                    return {
+                        NormalFloat = { bg = "none"},
+                        FloatBorder = { bg = "none"},
+                        Pmenu = { bg = "none"}
+                    }
+                end,
                 integrations = {
                     cmp = true,
                     gitsigns = true,
