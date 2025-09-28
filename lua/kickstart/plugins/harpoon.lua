@@ -24,29 +24,19 @@ return {
       desc = "Harpoon Select 1"
     },
     {
-      "<C-t>",
+      "<C-j>",
       function() require("harpoon"):list():select(2) end,
       desc = "Harpoon Select 2"
     },
     {
-      "<C-n>",
+      "<C-l>",
       function() require("harpoon"):list():select(3) end,
       desc = "Harpoon Select 3"
     },
     {
-      "<C-s>",
+      "<C-l>",
       function() require("harpoon"):list():select(4) end,
       desc = "Harpoon Select 4"
-    },
-    {
-      "<C-S-P>",
-      function() require("harpoon"):list():prev() end,
-      desc = "Harpoon Prev File"
-    },
-    {
-      "<C-S-N>",
-      function() require("harpoon"):list():next() end,
-      desc = "Harpoon Next File"
     },
   },
 }
