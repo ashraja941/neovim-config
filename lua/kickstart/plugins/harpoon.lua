@@ -29,7 +29,7 @@ return {
       desc = "Harpoon Select 2"
     },
     {
-      "<C-l>",
+      "<C-k>",
       function() require("harpoon"):list():select(3) end,
       desc = "Harpoon Select 3"
     },
