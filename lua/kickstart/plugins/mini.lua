@@ -9,11 +9,29 @@ return {
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       local gen_spec = require('mini.ai').gen_spec
-      require('mini.ai').setup( 
-        {
-          n_lines = 500,
-        }
-      )
+      require('mini.ai').setup({
+        n_lines = 500,
+        -- Add Treesitter-powered function textobject on `F`.
+        -- Usage: `viF` for inner function body, `vaF` for outer function (sig + body).
+        custom_textobjects = {
+          -- Keep `F` for function definition textobject
+          F = gen_spec.treesitter({
+            a = { '@function.outer', '@method.outer' },
+            i = { '@function.inner', '@method.inner' },
+          }),
+          -- Make lowercase `f` also select function definitions (not calls),
+          -- so `vif`/`vaf` operate on function bodies/definitions.
+          f = gen_spec.treesitter({
+            a = { '@function.outer', '@method.outer' },
+            i = { '@function.inner', '@method.inner' },
+          }),
+          -- Ensure `a` is the argument/parameter textobject so `via` selects arguments
+          a = gen_spec.treesitter({
+            a = { '@parameter.outer' },
+            i = { '@parameter.inner' },
+          }),
+        },
+      })
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
