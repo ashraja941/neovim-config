@@ -31,7 +31,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set("n","<leader>et",vim.cmd.Ex)
+-- vim.keymap.set("n","<leader>et",vim.cmd.Ex)
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
@@ -56,4 +56,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('n','<leader>lg',function () Snacks.lazygit() end, { desc = '[L]azy [G]it'})
 
 vim.keymap.set('n','<leader>vs','<cmd>vsplit<CR>', { desc = '[V]ertical [S]plit'})
+
+vim.keymap.set('x','<leader>p',"\"_dP", {desc = 'paste without deleting the thing underneath'} )
 -- vim: ts=2 sts=2 sw=2 et
