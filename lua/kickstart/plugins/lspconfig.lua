@@ -271,13 +271,17 @@ return {
         },
       }
       
-      -- require('lspconfig').zls.setup({
-      --   settings = {
-      --     zls = {
-      --       zig_exe_path = "D:/Program Files/zig-x86_64-windows-0.15.0-dev.1254+c9ce1debe/zig.exe",
-      --     }
-      --   }
-      -- })
+      vim.lsp.config("zls", {
+        settings = {
+          zls = {
+            enable_inlay_hints = true,
+            inlay_hints_show_parameter_name = true,
+            inlay_hints_show_variable_type_hints = true,
+            inlay_hints_show_struct_literal_field_type = true,
+            inlay_hints_exclude_single_argument = false,
+          }
+        }
+      })
     end,
   },
 }
