@@ -58,4 +58,6 @@ vim.keymap.set('n','<leader>lg',function () Snacks.lazygit() end, { desc = '[L]a
 vim.keymap.set('n','<leader>vs','<cmd>vsplit<CR>', { desc = '[V]ertical [S]plit'})
 
 vim.keymap.set('x','<leader>p',"\"_dP", {desc = 'paste without deleting the thing underneath'} )
+
+vim.keymap.set('n', '<leader>gw', vim.diagnostic.open_float)
 -- vim: ts=2 sts=2 sw=2 et
