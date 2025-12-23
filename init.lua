@@ -12,17 +12,31 @@ require 'options'
 
 require 'lazy-bootstrap'
 
+-- start treesitter syntax highlighting in all files that have parsers installed
 local group = vim.api.nvim_create_augroup('TreesitterSetup', { clear = true })
 
 vim.api.nvim_create_autocmd('FileType', {
     group = group,
-    -- List the languages you want to enable
-    pattern = { "python", "lua", "c", "markdown", "vim" }, 
+    pattern = '*', -- Check for all filetypes
     callback = function(args)
-        -- Enable Neovim's built-in treesitter highlighting
-        vim.treesitter.start(args.buf)
+        local bufnr = args.buf
+        local ft = vim.bo[bufnr].filetype
+        
+        -- Check if a parser is available for this filetype
+        -- We use pcall to safely check if Neovim can get a parser for this language
+        local lang = vim.treesitter.language.get_lang(ft) or ft
+        local has_parser = pcall(vim.treesitter.get_parser, bufnr, lang)
 
-        -- Enable treesitter-based indentation
-        vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        if has_parser then
+            -- 1. Enable Highlight
+            vim.treesitter.start(bufnr)
+
+            -- 2. Enable Indentation
+            -- Note: We only do this if nvim-treesitter is installed
+            local ok, ts_indent = pcall(require, 'nvim-treesitter.indent')
+            if ok then
+                vim.bo[bufnr].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end
+        end
     end,
 })
