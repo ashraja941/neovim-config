@@ -24,3 +24,20 @@ vim.keymap.set('n','<leader>vs','<cmd>vsplit<CR>', { desc = '[V]ertical [S]plit'
 vim.keymap.set('x','<leader>p',"\"_dP", {desc = 'paste without deleting the thing underneath'} )
 
 vim.keymap.set('n', '<leader>gw', vim.diagnostic.open_float)
+
+-- Snacks File Explorer
+vim.keymap.set("n", "<leader>e", function()
+  local explorer = Snacks.picker.get({ source = "explorer" })[1]
+  if explorer then
+    if explorer:is_focused() then
+      explorer:close()
+    else
+      explorer:focus()
+    end
+  else
+    Snacks.explorer()
+  end
+end, { desc = "Toggle/Focus Explorer" })
+
+-- Snacks Lazygit
+vim.keymap.set('n','<leader>lg',function () Snacks.lazygit() end, { desc = '[L]azy [G]it'})
