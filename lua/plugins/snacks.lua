@@ -13,7 +13,13 @@ return {
                 enabled = false,
                 sources = {
                     explorer = {
-                        layout = {preset = "default", backdrop = 60},
+                        layout = {preset = "default",
+                            backdrop = 60,
+                            layout = {
+                                width = 0.5
+                            }
+
+                        },
                         auto_close = true,
                         jump = {close = true},
                     }
