@@ -41,3 +41,6 @@ end, { desc = "Toggle/Focus Explorer" })
 
 -- Snacks Lazygit
 vim.keymap.set('n','<leader>lg',function () Snacks.lazygit() end, { desc = '[L]azy [G]it'})
+
+--Snacks Dashboard
+vim.keymap.set('n', '<Esc><Esc>',function () Snacks.dashboard() end , { desc = 'Enter Dashboard' })

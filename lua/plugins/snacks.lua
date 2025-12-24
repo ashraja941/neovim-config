@@ -13,6 +13,8 @@ return {
                 enabled = false,
                 sources = {
                     explorer = {
+                        hidden = true,
+                        ignored = true,
                         layout = {preset = "default",
                             backdrop = 60,
                             layout = {
