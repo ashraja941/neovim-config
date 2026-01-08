@@ -32,6 +32,8 @@ return {
 			-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
+			vim.keymap.del("n", "s")
+			vim.keymap.del("x", "s")
 
 			-- Simple and easy statusline.
 			local statusline = require("mini.statusline")
