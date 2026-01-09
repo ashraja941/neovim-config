@@ -94,4 +94,4 @@ local catpuccin = {
 	end,
 }
 
-return rosepine
+return catpuccin
