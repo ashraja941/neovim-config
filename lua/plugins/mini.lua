@@ -12,13 +12,13 @@ return {
 					-- Keep `F` for function definition textobject
 					F = gen_spec.treesitter({
 						a = { "@function.outer", "@method.outer" },
-						i = { "@function.outer", "@method.outer" },
+						i = { "@function.inner", "@method.outer" },
 					}),
 					-- Make lowercase `f` also select function definitions (not calls),
 					-- so `vif`/`vaf` operate on function bodies/definitions.
 					f = gen_spec.treesitter({
 						a = { "@function.outer", "@method.outer" },
-						i = { "@function.outer", "@method.outer" },
+						i = { "@function.inner", "@method.outer" },
 					}),
 					-- Ensure `a` is the argument/parameter textobject so `via` selects arguments
 					a = gen_spec.treesitter({
@@ -27,7 +27,6 @@ return {
 					}),
 				},
 			})
-
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
 			-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
