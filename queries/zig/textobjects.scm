@@ -9,7 +9,3 @@
 (function_declaration) @function.outer
 ; function_declaration: just the body block
 (function_declaration body: (block) @function.inner)
-
-; Some Zig grammars may name the body field differently. If InspectTree shows a
-; different field name (like `block:`), add a matching alternative below, e.g.:
-; (function_declaration block: (block) @function.inner)
